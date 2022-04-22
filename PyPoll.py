@@ -6,7 +6,6 @@
 #Winner of the election based on popular vote
 
 import csv
-
 #module to open file which direct path is unknown
 import os
 
@@ -24,8 +23,8 @@ with open(file_to_load) as election_data:
     filereader = csv.reader(election_data)
 
     #prints each row in the csv file
-    for row in filereader:
-        print(row)
+    headers = next(filereader)
+    print(headers)
 
     #print file object
     

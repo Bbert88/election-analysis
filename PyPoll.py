@@ -23,6 +23,10 @@ candidatelist = []
 
 candidatevotes = {}
 
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
+
 #Open the election results and read the file
 with open(file_to_load) as election_data:
 
@@ -31,7 +35,7 @@ with open(file_to_load) as election_data:
 
     #prints header row in the csv file
     headers = next(filereader)
-    print(headers)
+    #print(headers)
 
    
     for row in filereader:
@@ -41,7 +45,7 @@ with open(file_to_load) as election_data:
     
         #Get candidate name 
         candidatename = row[2]
-        
+
         #check if candidate is already in list, if not then add to list
         if candidatename not in candidatelist:
             candidatelist.append(candidatename)
@@ -49,11 +53,43 @@ with open(file_to_load) as election_data:
             candidatevotes[candidatename] = 0
         #increment candidates vote count
         candidatevotes[candidatename] += 1
-        
 
-        
+    #calculate each candidates vote percentage using candidatelist and candidatevotes dict    
+    for cand in candidatelist:
+        votes = candidatevotes[cand]
+        votepercent = float(votes) / float(totalvotes) * 100
+        print(f"{cand}: {votepercent:.1f}% ({votes:,})")
 
-    print(candidatevotes)
+        if votes > winning_count:
+            winning_count = votes
+            winning_percentage = votepercent
+            winning_candidate = cand
+
+    #print winning candidate, their vote count, and their vote percentage   
+    winning_candidate_summary = (
+        f"-------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"-------------------------"
+    )
+
+    print(winning_candidate_summary)
+
+    
+
+
+
+
+            
+
+            
+
+
+
+      
+
+    #print(candidatevotes)
 
 
 

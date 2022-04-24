@@ -32,13 +32,14 @@ The analysis of the election show that:
     - Arapahoe County accounted for 6.7% of the total vote (24,801 votes). 
 - The county with the largest voter turnout was Denver by a wide margin. 
 
-
-provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
 ## Summary
 
-It is clear that some powerful tools were used in this project. Python, coupled with other applications, can accomplish 
-cumbersome tasks with ease. Another great attribute of this Python script is that it can be used repeatedly for other
-elections. This script can analyze any set of election data which is provided, with only a few modifications. It is my proposal that this script be considered for use in all future elections. The script would not need to be changed due to varying number of counties, candidates, or votes. A few examples of simple changes which could be made to allow for the analysis of another election are as follows:
+It is clear that some powerful tools were used in this project. Python, coupled with other applications, can accomplish cumbersome tasks with ease. Another great attribute of this Python script is that it can be used repeatedly for other elections. This script can analyze any set of election data which is provided, with only a few modifications, if needed. It is my proposal that this script be considered for use in all future elections. The script would not need to be changed due to varying number of counties, candidates, or votes. A few examples of simple changes which could be made to allow for the analysis of another election are as follows:
 - ![filetoload](./Resources/filetoload.png)
 This image represents the line of code which assigns the file path to a variable. The 'election_results.csv' would need to be edited to match the csv file name for additional election data sets. This is a simple change which could be managed quite easily. 
-- 
+- This script could be applied to a multi winner system (ie. multiple council seats) in which more than one winner is declared. The current script is for a single winner system but could be modified:
+- ![winningvariables](./Resources/winningvariables.png)
+Here, the code could be changed so that the variables are of type Lists, so that multiple winners could be printed. 
+- ![determinewinners](./Resources/determinewinners.png)
+Here, the code currently determines the candidate with the most votes and highest percentage. This could be modified to determine the top 2, 3, 4 etc. candidates and then add them to the list of winners referenced above. 
+Those were only a few ways which exemplify the flexibility of this script, there are many more. Thank you for your consideration. 

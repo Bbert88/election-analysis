@@ -42,4 +42,5 @@ This image represents the line of code which assigns the file path to a variable
 Here, the code could be changed so that the variables are of type Lists, so that multiple winners could be printed. 
 - ![determinewinners](./Resources/determinewinners.png)
 Here, the code currently determines the candidate with the most votes and highest percentage. This could be modified to determine the top 2, 3, 4 etc. candidates and then add them to the list of winners referenced above. 
+
 Those were only a few ways which exemplify the flexibility of this script, there are many more. Thank you for your consideration. 

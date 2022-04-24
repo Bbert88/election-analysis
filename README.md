@@ -39,6 +39,6 @@ provide a business proposal to the election commission on how this script can be
 It is clear that some powerful tools were used in this project. Python, coupled with other applications, can accomplish 
 cumbersome tasks with ease. Another great attribute of this Python script is that it can be used repeatedly for other
 elections. This script can analyze any set of election data which is provided, with only a few modifications. It is my proposal that this script be considered for use in all future elections. The script would not need to be changed due to varying number of counties, candidates, or votes. A few examples of simple changes which could be made to allow for the analysis of another election are as follows:
-- ![filetoload](Resources\filetoload.png)
+- ![filetoload](./Resources/filetoload.png)
 This image represents the line of code which assigns the file path to a variable. The 'election_results.csv' would need to be edited to match the csv file name for additional election data sets. This is a simple change which could be managed quite easily. 
 - 
